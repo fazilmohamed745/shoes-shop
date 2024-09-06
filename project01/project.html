@@ -1,0 +1,335 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Your Style</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .hero {
+            background-color: #000;
+            color: #fff;
+            padding: 100px 0;
+        }
+        .hero-image-container:hover{
+            transform: translateY(-10px);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .featured-products {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        .product-card {
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        .product-card:hover .product-overlay {
+            height: 100%;
+        }
+        .newsletter {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 30px 0;
+        }
+        .contact-us-spacing 
+        {
+            margin-bottom: 50px; 
+        }
+        .hero-image-container {
+        height: 100%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 0.5rem;
+        }
+        .category-card {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+       }
+       .category-card:hover {
+       transform: translateY(-5px);
+       }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="logo">
+            <a class="navbar-brand" href="#">Signature Shoes</a></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                    <a href="#featured-products" class="btn btn-light">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="#contactus">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="cartIcon" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <i class="bi bi-cart"></i> <span id="cartCount" class="badge bg-primary">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Discover Your Style</h1>
+                    <p class="lead">Explore our curated collection of trendsetting fashion and accessories. Elevate your wardrobe today.</p>
+                       <a href="#featured-products" class="btn btn-light">Shop Now</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container">
+                    <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/8de611bf-8270-4789-a44a-96b0c933396d/air-max-1-essential-shoes-X2M7M6.png" alt="Hero Image" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="featured-products" class="featured-products">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Products</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/2ca5995c-34c1-44ae-9d00-14e46dcc0b8e/air-jordan-1-low-method-of-make-shoes-m6FCTq.png" class="card-img-top" alt="Product 1">
+                        <div class="product-overlay d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h5 class="card-title text-white">Air Jordan 1</h5>
+                                <p class="card-text text-white">$29.99</p>
+                                <a href="#" class="btn btn-light">Add Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/8b6f89cd-8b70-4080-b6b4-eea40132cdc5/zoom-vomero-5-shoes-gwmf2m.png" class="card-img-top" alt="Product 2">
+                        <div class="product-overlay d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h5 class="card-title text-white">Zoom Vomero 5</h5>
+                                <p class="card-text text-white">$39.99</p>
+                                <a href="#" class="btn btn-light">Add Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/3d34b19a-00d0-4dd2-83d1-0ec839d92a2e/cortez-shoes-0VH7qz.png" class="card-img-top" alt="Product 3">
+                        <div class="product-overlay d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h5 class="card-title text-white">Cortez Shoes</h5>
+                                <p class="card-text text-white">$29.99</p>
+                                <a href="#" class="btn btn-light">Add Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/489b06f3-42b4-45a2-aa75-4cfb16ac2e71/court-vision-low-next-nature-shoes-N2fFHb.png" class="card-img-top" alt="Product 4">
+                        <div class="product-overlay d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h5 class="card-title text-white">Cortez Shoes</h5>
+                                <p class="card-text text-white">$44.5</p>
+                                <a href="#" class="btn btn-light">Add Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="text-center mb-5">Shop by Categories</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card">
+                        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6f8fbd46-bd45-48d4-939c-18d6cfdc7954/W+AIR+MAX+KOKO+SANDAL+SE.png" class="card-img-top" alt="Footwear Category">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sandals</h5>
+                            <p class="card-text"> Ability to blend product innovation and marketing savvy to develop deep ties between its products and its customers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card">
+                        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e61080a2-fbe3-4bd9-917b-673bb10f6c73/AIR+MAX+DN+OLY.png" class="card-img-top" alt="Apparel Category">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sports Shoes</h5>
+                            <p class="card-text">An emblem of style, taste, and the competitive spirit that lives within amateurs and professionals alike.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card">
+                        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ac54f0f4-b855-433b-924d-fda44024872c/NK+ACDMY+TEAM+M+DUFF.png" class="card-img-top" alt="Accessories Category">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bag</h5>
+                            <p class="card-text">The backpack is comfortable to carry even when packed to bursting.</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Our Mission</h3>
+                    <p>Signature Shoes is committed to bringing innovation and inspiration to every athlete in the world. We believe in the power of sport to change lives and push the boundaries of human potential. Our mission is to create groundbreaking products and experiences that help athletes achieve their goals and live their best lives.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Our History</h3>
+                    <p>Signature Shoes began as a small shoe distributor known as Blue Ribbon Sports. Over the decades, we've evolved into a global leader in sportswear and equipment, constantly pushing the limits of design and technology. Our journey from a small startup to a worldwide brand is a testament to our dedication to excellence and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="addcart">
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="cartItems" class="list-group">
+                        </ul>
+                        <div class="mt-3 text-end">
+                            <h5>Total: $<span id="cartTotal">0.00</span></h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+            const products = [
+            { id: 1, name: 'Air Jordan 1', price: 29.99 },
+            { id: 2, name: 'Zoom Vomero 5', price: 39.99 },
+            { id: 3, name: 'Cortez Shoes', price: 29.99 },
+            { id: 4, name: 'Cortez ShoesCortez Shoes', price: 44.5 }
+        ];
+        let cart = [];
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                cart.push(product);
+                updateCartUI();
+            }
+        }
+        function updateCartUI() {
+            const cartItems = document.getElementById('cartItems');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price;
+                const listItem = document.createElement('li');
+                listItem.classList.add('list-group-item');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItems.appendChild(listItem);
+            });
+            cartCount.textContent = cart.length;
+            cartTotal.textContent = total.toFixed(2);
+        }
+        document.querySelectorAll('.product-card .btn').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                addToCart(index + 1); 
+            });
+        });
+        document.getElementById('cartIcon').addEventListener('click', () => {
+            new bootstrap.Modal(document.getElementById('cartModal')).show();
+        });
+    </script>
+    <section id="contactus">
+        <div class="container">            
+            <div class="row justify-content-center mt-5 contact-us-spacing">
+                <div class="col-md-8">
+                        <h3 class="text-center mb-4">Contact Us</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Signature Shoes. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html
